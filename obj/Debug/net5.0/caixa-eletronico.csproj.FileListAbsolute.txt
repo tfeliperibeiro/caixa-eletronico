@@ -1,0 +1,16 @@
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico.deps.json
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico.runtimeconfig.json
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico.runtimeconfig.dev.json
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico.dll
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/ref/caixa-eletronico.dll
+/home/tfeliperibeiro/caixa-eletronico/bin/Debug/net5.0/caixa-eletronico.pdb
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.csproj.AssemblyReference.cache
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.GeneratedMSBuildEditorConfig.editorconfig
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.AssemblyInfoInputs.cache
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.AssemblyInfo.cs
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.csproj.CoreCompileInputs.cache
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.dll
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/ref/caixa-eletronico.dll
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.pdb
+/home/tfeliperibeiro/caixa-eletronico/obj/Debug/net5.0/caixa-eletronico.genruntimeconfig.cache
