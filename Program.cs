@@ -41,6 +41,7 @@ namespace caixa_eletronico
         Console.WriteLine("Digite 2 para fazer um saque");
         Console.WriteLine("Digite 3 para fazer um deposito");
         Console.WriteLine("Digite 4 para ver o extrato");
+        Console.WriteLine("Digite 5 para simular um empréstimo");
         Console.WriteLine("Digite 0 para sair");
 
         string opcao = Console.ReadLine();
@@ -58,6 +59,9 @@ namespace caixa_eletronico
             break;
           case "4":
             consultaExtrato(extratoCliente);
+            break;
+          case "5":
+            saldo = simularEmprestimo(saldo, extratoCliente);
             break;
           case "0":
             Console.WriteLine("Obrigado por usar nosso banco " + nome + "!");
@@ -150,6 +154,69 @@ namespace caixa_eletronico
         Console.WriteLine(extratoCliente.Tipo[i]);
         Console.WriteLine(extratoCliente.Valor[i]);
         Console.WriteLine("-----------------------");
+      }
+    }
+
+    static double simularEmprestimo(double saldo, Extrato extratoCliente)
+    {
+      Console.WriteLine("-----------------------");
+      Console.WriteLine("Digite o valor que deseja fazer o empréstimo");
+      Console.WriteLine("-----------------------");
+
+      string valorEmprestimo = Console.ReadLine();
+
+      if (Int32.Parse(valorEmprestimo) <= 0)
+      {
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("Digite o valor acima de R$ 0.");
+        Console.WriteLine("-----------------------");
+        return saldo;
+      }
+
+      double valorComJuros = 0.2 * Int32.Parse(valorEmprestimo);
+
+      Console.WriteLine("-----------------------");
+      Console.WriteLine("Em quantas vezes você deseja parcelar?");
+      Console.WriteLine("ATENÇÃO: Parcelamos somente em até 12 vezes.");
+      Console.WriteLine("-----------------------");
+
+      string parcelas = Console.ReadLine();
+
+      if (Int32.Parse(parcelas) <= 0 || Int32.Parse(parcelas) > 12)
+      {
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("Digite um número de parcelas válidas.");
+        Console.WriteLine("-----------------------");
+        return saldo;
+      }
+
+      double valorFinalEmprestimo = (valorComJuros * Int32.Parse(parcelas)) + Int32.Parse(valorEmprestimo);
+
+      Console.WriteLine("-----------------------");
+      Console.WriteLine("O valor final da dívida será de " + valorFinalEmprestimo.ToString("C"));
+      Console.WriteLine("Digite 1 para CONFIRMAR e 2 para CANCELAR!");
+      Console.WriteLine("-----------------------");
+
+      string opcao = Console.ReadLine();
+
+      if (Int32.Parse(opcao) == 1)
+      {
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("Operação realizada, seu dinheiro já está em sua conta.");
+        Console.WriteLine("-----------------------");
+
+        extratoCliente.Tipo.Add("Emprestimo");
+        extratoCliente.Valor.Add("Você tem um saldo devedor de " + valorFinalEmprestimo.ToString("C") + " que será dividido em " + parcelas + " vezes de " + valorComJuros.ToString("C") + " por mês.");
+
+        saldo = Int32.Parse(valorEmprestimo);
+        return saldo;
+      }
+      else
+      {
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("Operação cancelada!");
+        Console.WriteLine("-----------------------");
+        return saldo;
       }
     }
   }
