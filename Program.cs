@@ -61,7 +61,7 @@ namespace caixa_eletronico
             consultaExtrato(extratoCliente);
             break;
           case "5":
-            saldo = simularEmprestimo(saldo, extratoCliente);
+            saldo += simularEmprestimo(saldo, extratoCliente);
             break;
           case "0":
             Console.WriteLine("Obrigado por usar nosso banco " + nome + "!");
@@ -206,7 +206,14 @@ namespace caixa_eletronico
         Console.WriteLine("-----------------------");
 
         extratoCliente.Tipo.Add("Emprestimo");
-        extratoCliente.Valor.Add("Você tem um saldo devedor de " + valorFinalEmprestimo.ToString("C") + " que será dividido em " + parcelas + " vezes de " + valorComJuros.ToString("C") + " por mês.");
+        if (Int32.Parse(parcelas) != 1)
+        {
+          extratoCliente.Valor.Add("Você tem um saldo devedor de " + valorFinalEmprestimo.ToString("C") + " que será dividido em " + parcelas + " vezes.");
+        }
+        else
+        {
+          extratoCliente.Valor.Add("Você tem um saldo devedor de " + valorFinalEmprestimo.ToString("C") + " que será dividido em " + parcelas + " vez.");
+        }
 
         saldo = Int32.Parse(valorEmprestimo);
         return saldo;
