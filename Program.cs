@@ -205,7 +205,7 @@ namespace caixa_eletronico
         Console.WriteLine("Operação realizada, seu dinheiro já está em sua conta.");
         Console.WriteLine("-----------------------");
 
-        extratoCliente.Tipo.Add("Emprestimo");
+        extratoCliente.Tipo.Add("Emprestimo:");
         if (Int32.Parse(parcelas) != 1)
         {
           extratoCliente.Valor.Add("Você tem um saldo devedor de " + valorFinalEmprestimo.ToString("C") + " que será dividido em " + parcelas + " vezes.");
