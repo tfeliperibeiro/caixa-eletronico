@@ -129,8 +129,6 @@ namespace caixa_eletronico
       Console.WriteLine("-----------------------");
       Console.WriteLine("Saque realizado com sucesso!");
       Console.WriteLine("-----------------------");
-      extratoCliente.Tipo.Add("Saque:");
-      extratoCliente.Valor.Add("-" + saque);
 
       if (saldo < double.Parse(saque))
       {
@@ -141,6 +139,8 @@ namespace caixa_eletronico
         return saldo;
       }
 
+      extratoCliente.Tipo.Add("Saque:");
+      extratoCliente.Valor.Add("-" + saque);
       saldo -= double.Parse(saque);
       return saldo;
     }

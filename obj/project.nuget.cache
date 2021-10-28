@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dtB/4CLUAGQYS9s3LuRoR5aQ/1d2PvUyxM8/hdkyqYBD4cyEKBWnpOKcsQPAsrb1NTJSfQKaxfKV2sIVN1CLBA==",
+  "dgSpecHash": "BV/YxRc6cnvHdZdWB7yXzwKLOFcF7zkWozCURK1XEbyJqllR0YUxK007GzC6LK9vJCmnwcGqbttugcKNZs/Fhg==",
   "success": true,
-  "projectFilePath": "/home/tfeliperibeiro/caixa-eletronico/caixa-eletronico.csproj",
+  "projectFilePath": "/home/tfeliperibeiro/caixa-eletronico-thiago/caixa-eletronico.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

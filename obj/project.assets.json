@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tfeliperibeiro/caixa-eletronico/caixa-eletronico.csproj",
+      "projectUniqueName": "/home/tfeliperibeiro/caixa-eletronico-thiago/caixa-eletronico.csproj",
       "projectName": "caixa-eletronico",
-      "projectPath": "/home/tfeliperibeiro/caixa-eletronico/caixa-eletronico.csproj",
+      "projectPath": "/home/tfeliperibeiro/caixa-eletronico-thiago/caixa-eletronico.csproj",
       "packagesPath": "/home/tfeliperibeiro/.nuget/packages/",
-      "outputPath": "/home/tfeliperibeiro/caixa-eletronico/obj/",
+      "outputPath": "/home/tfeliperibeiro/caixa-eletronico-thiago/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/tfeliperibeiro/.nuget/NuGet/NuGet.Config"
